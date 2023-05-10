@@ -5,16 +5,15 @@ import {AngularFirestoreModule} from '@angular/fire/compat/firestore'
 
 import { AppComponent } from './app.component';
 import { enviroment } from 'src/environments/environment';
-import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TodoComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(enviroment.firebaseconfig)
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
